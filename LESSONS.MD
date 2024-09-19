@@ -21,10 +21,10 @@ Outputs:
 #### Create IAM user
 With access key and secret key
 #### install aws cli and run
->>> aws configure
+aws configure
 
 #### validate the template
-aws cloudformation validate-template --template-body file://D:/DEVOPS/aws/01_cloud_formation/ec2_instance_template.yaml
+aws cloudformation validate-template --template-body file://ec2_instance_template.yaml
 
 #### create stack
 aws cloudformation create-stack --stack-name MyNewStack1 --template-body file://ec2_instance_template.yaml
