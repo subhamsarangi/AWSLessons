@@ -54,14 +54,14 @@ With access key and secret key
 
 `cdk destroy`
 
-### aws toolkit
-- aws exploer
+### aws toolkit for VS Code
+- aws explorer
 - aws cdk explorer
-- intellisense for ecs files
+- intellisense for ECS files
 - create, debug, deploy serverless apps via SAM and CFN
 
 ### aws access keys
-- aka aws credentials
+- aka AWS credentials
 - never push to a repo
 - only 2 keys at a time having diff profile names
 - can deactivate keys
