@@ -1,6 +1,22 @@
+import os
+import random
+import string
 import boto3
 from botocore.exceptions import NoCredentialsError
+from slugify import slugify
+from dotenv import load_dotenv
+
+load_dotenv()
+
 s3 = boto3.client('s3')
+bucket_name = os.getenv('S3_BUCKET_NAME')
+
+file_name = "01_s3_lambda_trigger/my example.csv"
+
+def generate_random_string(length=8):
+    """Generate a random string of fixed length."""
+    letters = string.ascii_letters + string.digits
+    return ''.join(random.choice(letters) for i in range(length))
 
 def upload_file_to_s3(file_name, bucket_name, object_name=None):
     """Upload a file to an S3 bucket.
@@ -10,8 +26,12 @@ def upload_file_to_s3(file_name, bucket_name, object_name=None):
     :param object_name: S3 object name. If not specified, file_name is used
     :return: True if file was uploaded, else False
     """
+
     if object_name is None:
-        object_name = file_name
+        random_string = generate_random_string()
+        base_name = os.path.basename(file_name)
+        base_name, ext = os.path.splitext(os.path.basename(file_name))
+        object_name = f"{slugify(base_name)}_{random_string}{ext}"
 
     try:
         s3.upload_file(file_name, bucket_name, object_name)
@@ -24,6 +44,4 @@ def upload_file_to_s3(file_name, bucket_name, object_name=None):
         print("Credentials not available.")
         return False
 
-file_name = "example.csv"
-bucket_name = "omega-lambda-7-xl-9"
 upload_file_to_s3(file_name, bucket_name)
