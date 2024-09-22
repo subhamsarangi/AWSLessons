@@ -47,6 +47,27 @@ With access key and secret key
 
 #### install aws-cdk and deploy
 `npm i -g aws-cdk`
-cdk bootstrap
-cdk deploy
-cdk destroy
+
+`cdk bootstrap`
+
+`cdk deploy`
+
+`cdk destroy`
+
+### aws toolkit
+- aws exploer
+- aws cdk explorer
+- intellisense for ecs files
+- create, debug, deploy serverless apps via SAM and CFN
+
+### aws access keye
+- aka aws credentials
+- never push to a repo
+- only 2 keys at a time having diff profile names
+- can deactivate keys
+- stored in ~/.aws/.credentials as a TOML
+- use env vars AWS_SECRET_KEY, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION
+
+### aws documentation
+- large
+- [link] (doc.aws.amazon.com)
