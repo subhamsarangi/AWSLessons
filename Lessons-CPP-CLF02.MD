@@ -46,6 +46,8 @@ With access key and secret key
 - In SDK: If you make two API calls to create an EC2 instance, you might end up with two instances unless you use safeguards like unique request identifiers.
 
 #### install aws-cdk and deploy
+[github link for hello-cdk](https://github.com/aws/aws-cdk)
+
 `npm i -g aws-cdk`
 
 `cdk bootstrap`
