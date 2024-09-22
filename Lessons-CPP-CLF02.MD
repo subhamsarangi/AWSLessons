@@ -60,14 +60,14 @@ With access key and secret key
 - intellisense for ecs files
 - create, debug, deploy serverless apps via SAM and CFN
 
-### aws access keye
+### aws access keys
 - aka aws credentials
 - never push to a repo
 - only 2 keys at a time having diff profile names
 - can deactivate keys
-- stored in ~/.aws/.credentials as a TOML
+- stored in ~/.aws/.credentials as a TOML file.
 - use env vars AWS_SECRET_KEY, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION
 
 ### aws documentation
-- large
+- large. very.
 - [link] (doc.aws.amazon.com)
