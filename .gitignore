@@ -1,3 +1,4 @@
 deets.txt
 venv/
 .env
+*.pem
