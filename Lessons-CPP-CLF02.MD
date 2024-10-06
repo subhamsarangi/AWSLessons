@@ -1,4 +1,4 @@
-# Certified Cloud Practitioner
+# AWS Certified Cloud Practitioner
 
 ## 01 CLOUD FORMATION
 
