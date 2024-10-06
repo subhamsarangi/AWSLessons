@@ -35,7 +35,7 @@ With access key and secret key
 `aws cloudformation create-stack --stack-name MyNewStack1 --template-body file://ec2_instance_template.yaml
 `
 ### 2.2 AWS CDK
-- cloud developement kit in ts, python, node etc.
+- cloud development kit in ts, python, node etc.
 - powered by CloudFormation (generates templates as an intermediate step)
 - has [CDK constructs](constructs.dev) (a large library of reusable components)
 - has CLI
@@ -168,7 +168,7 @@ With access key and secret key
 - Object (S3 - Simple Storage Service, no scaling limit, no worrying no locks)
 - Hybrid (Storage Gateway, extends onprem)
 - Backup (managed backup service for multiple services)
-- CloudEndure (replicated data continuously)
+- CloudEndure (replicates data continuously)
 - FSx (file system, linux, windows)
 
 ### 8.1 Snow family
@@ -180,9 +180,9 @@ With access key and secret key
 - buckets hold objects and folders
 - size 0b to 5Tb
 - S3 Storage Classes
-  - default/standard: 99.99% availability, e zones
+  - default/standard: 99.99% availability, >=3 zones
   - intelligent tiering: uses ML
-  - standart-IA - infrequent access, less available
+  - standard-IA - infrequent access, less available
   - One-zone-IA - 99.5% available, less durable, cheaper than standard-IA
   - glacier: can take minutes to hours. long-term cold storage
   - glacier deep archive: 12 hour retrieval time, lowest cost
