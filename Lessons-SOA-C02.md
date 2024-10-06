@@ -1,1 +1,1 @@
-# AWS Certified Solutions Architect - Professional
+# AWS Certified SysOps Administrator - Associate
